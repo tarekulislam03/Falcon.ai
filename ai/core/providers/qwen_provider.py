@@ -38,7 +38,7 @@ class QwenProvider(IModelProvider):
                 model_path=settings.MODEL_PATH,
                 n_ctx=settings.MODEL_CONTEXT_LENGTH,
                 n_gpu_layers=settings.MODEL_GPU_LAYERS,
-                verbose=False # Set to True for debugging llama.cpp directly
+                verbose=True # Set to True to verify GPU offloading in stdout
             )
             self.status = "loaded"
             logger.info("Qwen model loaded successfully.")

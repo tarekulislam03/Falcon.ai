@@ -3,6 +3,10 @@ Centralized configuration and constants for the AI services.
 """
 import os
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Application constants
 APP_NAME = os.getenv("APP_NAME", "falcon_ai_services")
